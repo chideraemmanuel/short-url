@@ -7,9 +7,9 @@ A quick and easy tool to shorten your links. Simply paste a URL, get a shorter v
 ShortURL makes sharing links easier by turning long URLs into short, clean ones. It’s built using a custom API I developed, which ensures fast and reliable link shortening. Whether you're sharing on social media, in emails, or just want a tidy link, it’s a hassle-free way to shorten URLs.
 Check out the API [here](https://github.com/chideraemmanuel/mini-url-api).
 
-<!-- ## Live Demo
+## Live Demo
 
-Check out the live demo of the application [here](). -->
+Check out the live demo of the application [here](https://sly.vercel.app).
 
 ## Techologies Used
 
