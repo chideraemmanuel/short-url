@@ -1,6 +1,3 @@
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import { Sun, Moon } from 'lucide-react';
 import ThemeSwitcher from '@/components/theme-switcher';
 import LinkInput from '@/components/link-input';
 import Link from 'next/link';

@@ -20,8 +20,6 @@ const findURLRecord = async (id: string) => {
   const success_response: { url_id: string; destination_url: string } | '' =
     await response.json();
 
-  console.log('[SUCCESS_RESPONSE]', success_response);
-
   return success_response;
 };
 

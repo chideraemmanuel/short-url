@@ -54,12 +54,10 @@ const LinkInput: FC<Props> = () => {
       setIsLoading(false);
       setResponseData(response.data);
 
-      console.log('response.data', response.data);
-
       toast.success('Link generated successfully');
       setDialogOpen(true);
     } catch (error: any) {
-      console.log('[ERROR]', error);
+      setIsLoading(false);
 
       toast.error(
         error.response?.data?.error || error.message || 'Something went wrong'
@@ -102,15 +100,15 @@ const LinkInput: FC<Props> = () => {
       <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <AlertDialogContent className="w-[95%] rounded-lg">
           <AlertDialogHeader>
-            <AlertDialogTitle>Copy link</AlertDialogTitle>
+            <AlertDialogTitle>Your shortened URL is ready</AlertDialogTitle>
             <AlertDialogDescription>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Similique officia molestias, quibusdam necessitatibus consectetur
-              quae?
+              This is the shortened link you can use to share or access the page
+              more easily. Click the 'Copy link' button to copy it to your
+              clipboard!
             </AlertDialogDescription>
           </AlertDialogHeader>
 
-          <div className="flex items-center justify-between gap-5 p-3 md:p-3 h-16 md:h-16 border rounded-md">
+          <div className="mt-3 flex items-center justify-between gap-5 p-3 md:p-3 h-16 md:h-16 border rounded-md">
             <span className="w-[80%] truncate text-sm md:text-base">
               {process.env.NEXT_PUBLIC_CLIENT_BASE_URL}/
               {responseData?.short_url.slice(

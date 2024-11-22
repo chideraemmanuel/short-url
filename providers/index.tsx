@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import React, { FC } from 'react';
-import { Toaster } from 'sonner';
+import { Toaster } from '@/components/ui/sonner';
 
 const ThemeProvider = dynamic(
   () =>
