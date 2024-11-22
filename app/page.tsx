@@ -1,6 +1,6 @@
 import ThemeSwitcher from '@/components/theme-switcher';
 import LinkInput from '@/components/link-input';
-import Link from 'next/link';
+import Logo from '@/components/logo';
 
 export default function Home() {
   return (
@@ -8,9 +8,7 @@ export default function Home() {
       <div className="z-[5]">
         <div className="relative container md:pt-6 flex items-center justify-center min-h-screen">
           <div className="container absolute top-0 left-0 w-full flex justify-between items-center md:h-20 h-16">
-            <Link href={'/'} className="text-2xl font-semibold">
-              Short<span className="text-primary">URL</span>
-            </Link>
+            <Logo />
 
             <div className="flex items-center gap-3">
               <ThemeSwitcher />

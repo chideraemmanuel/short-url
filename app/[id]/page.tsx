@@ -17,7 +17,7 @@ const findURLRecord = async (id: string) => {
     throw new Error(error_response.error);
   }
 
-  const success_response: { url_id: string; destination_url: string } | '' =
+  const success_response: { url_id: string; destination_url: string } =
     await response.json();
 
   return success_response;
@@ -27,7 +27,7 @@ const LinkRedirectPage: FC<Props> = async ({ params }) => {
   const { id } = await params;
   const record = await findURLRecord(id);
 
-  if (record === '' || !record) notFound();
+  if (!record) notFound();
 
   redirect(record.destination_url);
 

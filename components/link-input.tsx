@@ -5,12 +5,11 @@ import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 import { URL_REGEX } from '@/constants';
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
