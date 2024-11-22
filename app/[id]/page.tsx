@@ -6,7 +6,9 @@ interface Props {
 }
 
 const findURLRecord = async (id: string) => {
-  const response = await fetch(`${process.env.API_BASE_URL}/${id}`);
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/${id}/find`
+  );
 
   if (!response.ok) {
     if (response.status === 404) return null;
